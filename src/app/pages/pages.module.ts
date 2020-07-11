@@ -5,6 +5,7 @@ import {BannerModule} from '../shared/components/banner/banner.component';
 import {ProductItemModule} from '../shared/components/product-item/product-item.component';
 import {MatGridListModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import {HttpClientModule} from '@angular/common/http';
     BannerModule,
     ProductItemModule,
     MatGridListModule,
-    HttpClientModule
+    HttpClientModule,
+    CommonModule
   ],
   exports: [
     HomeComponent
