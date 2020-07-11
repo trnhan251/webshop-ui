@@ -10,6 +10,7 @@ import * as fromApp from './shared/store/app.reducer';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {PagesModule} from './pages/pages.module';
 import {HeaderModule} from './shared/components/header/header.component';
+import {HomeEffects} from './pages/home/store/home.effects';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import {HeaderModule} from './shared/components/header/header.component';
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
     }),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([HomeEffects]),
     BrowserAnimationsModule,
     HeaderModule
   ],

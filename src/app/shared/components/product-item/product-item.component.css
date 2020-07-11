@@ -1,0 +1,34 @@
+.item-container {
+  width: 400px;
+  background-color: #f7f7f7;
+}
+
+.product-image {
+  width: 100%;
+}
+
+.content {
+  text-align: center;
+}
+
+.content h3 {
+  margin: 5px 0;
+}
+
+.content p {
+  margin: 5px 0;
+}
+
+.button-row {
+  width: 100%;
+}
+
+.button-row .mat-button {
+  width: 100%;
+  padding: 0 0;
+  background-color: black;
+  color: white;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 0;
+}

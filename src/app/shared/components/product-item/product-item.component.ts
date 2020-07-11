@@ -1,5 +1,7 @@
-import {Component, NgModule, OnInit} from '@angular/core';
+import {Component, Input, NgModule, OnInit} from '@angular/core';
 import {BannerComponent} from '../banner/banner.component';
+import {MatButtonModule} from '@angular/material';
+import {Product} from '../../models/product';
 
 @Component({
   selector: 'app-product-item',
@@ -7,7 +9,7 @@ import {BannerComponent} from '../banner/banner.component';
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent implements OnInit {
-
+  @Input() product: Product;
   constructor() { }
 
   ngOnInit() {
@@ -17,6 +19,7 @@ export class ProductItemComponent implements OnInit {
 
 @NgModule({
   imports: [
+    MatButtonModule
   ],
   declarations: [ ProductItemComponent ],
   exports: [ ProductItemComponent ]
