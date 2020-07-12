@@ -6,10 +6,12 @@ import {ProductItemModule} from '../shared/components/product-item/product-item.
 import {MatGridListModule} from '@angular/material';
 import {HttpClientModule} from '@angular/common/http';
 import {CommonModule} from '@angular/common';
+import {CartPageComponent} from './cart-page/cart-page.component';
 
 @NgModule({
   declarations: [
-    HomeComponent
+    HomeComponent,
+    CartPageComponent
   ],
   imports: [
     HeaderModule,
@@ -19,7 +21,8 @@ import {CommonModule} from '@angular/common';
     CommonModule
   ],
   exports: [
-    HomeComponent
+    HomeComponent,
+    CartPageComponent
   ]
 })
 export class PagesModule { }
