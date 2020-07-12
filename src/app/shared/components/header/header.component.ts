@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, NgModule, OnInit} from '@angular/core';
+import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
 
 @Component({
   selector: 'app-header',
@@ -13,3 +14,14 @@ export class HeaderComponent implements OnInit {
   }
 
 }
+
+@NgModule({
+  imports: [
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule
+  ],
+  declarations: [ HeaderComponent ],
+  exports: [ HeaderComponent ]
+})
+export class HeaderModule { }
