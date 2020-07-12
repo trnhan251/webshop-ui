@@ -3,6 +3,7 @@ import {Product} from '../../shared/models/product';
 import {Store} from '@ngrx/store';
 import * as fromApp from '../../shared/store/app.reducer';
 import * as HomeActions from './store/home.actions';
+import * as CartActions from '../cart-page/store/cart.actions';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -23,6 +24,12 @@ export class HomeComponent implements OnInit {
 
     if (this.products == null) {
       this.store.dispatch(new HomeActions.HomeLoadStart());
+    }
+    if (localStorage.getItem('sessionId') != null) {
+      this.store.dispatch(new CartActions.CartLoadStart());
+    }
+    if (localStorage.getItem('sessionId') == null) {
+      this.store.dispatch(new CartActions.CartRequestSessionStart());
     }
   }
 

@@ -16,7 +16,6 @@ import {CommonModule} from '@angular/common';
     BannerModule,
     ProductItemModule,
     MatGridListModule,
-    HttpClientModule,
     CommonModule
   ],
   exports: [

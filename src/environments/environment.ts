@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  catalogUrl: 'http://localhost:9080/api'
+  catalogUrl: 'http://localhost:9080/api',
+  cartUrl: 'http://localhost:9081/api',
+  checkoutUrl: 'http://localhost:9082/api',
+  shippingUrl: 'http://localhost:9083/api',
 };
 
 /*
