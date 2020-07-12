@@ -18,11 +18,7 @@ export class ProductItemComponent implements OnInit {
   ngOnInit() {
   }
   addNewItem() {
-    const newOrder: CartOrder = {
-      productId: this.product.id,
-      quantity: 1
-    };
-    this.store.dispatch(new CartActions.CartAddItemStart(newOrder));
+    this.store.dispatch(new CartActions.CartAddItemStart(this.product));
   }
 }
 

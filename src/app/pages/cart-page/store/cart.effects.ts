@@ -8,7 +8,7 @@ import {environment} from '../../../../environments/environment';
 import {error} from 'util';
 import {of} from 'rxjs';
 import {CartOrder} from '../../../shared/models/cart-order';
-
+import * as HomeActions from '../../home/store/home.actions';
 @Injectable()
 export class CartEffects {
   constructor(
@@ -40,18 +40,32 @@ export class CartEffects {
   );
 
   @Effect()
+  cartLoadSuccess = this.actions$.pipe(
+    ofType(CartActions.CART_LOAD_SUCCESS),
+    switchMap((data: CartActions.CartLoadSuccess) => {
+      return of(new HomeActions.HomeLoadStart(data.payload));
+    })
+  );
+
+  @Effect()
   cartAddItemStart = this.actions$.pipe(
     ofType(CartActions.CART_ADD_ITEM_START),
     switchMap((data: CartActions.CartAddItemStart) => {
       const baseUrL = environment.cartUrl + '/cart';
-      return this.http.post<CartOrder>(baseUrL, data.payload, {
+
+      const newOrder: CartOrder = {
+        productId: data.payload.id,
+        quantity: 1
+      };
+
+      return this.http.post<CartOrder>(baseUrL, newOrder, {
           params: {
             sessionId: localStorage.getItem('sessionId')
           }
         }).pipe(
         map((resData: any) => {
           console.log(resData);
-          return new CartActions.CartAddItemSuccess(resData);
+          return new CartActions.CartAddItemSuccess(resData, data.payload);
         }),
         catchError(errorRes => {
           const errorMessage = 'An error in CartAddItemStart occurred!';
@@ -60,6 +74,15 @@ export class CartEffects {
       );
     })
   );
+
+  @Effect()
+  cartAddItemSuccess = this.actions$.pipe(
+    ofType(CartActions.CART_ADD_ITEM_SUCCESS),
+    switchMap((data: CartActions.CartAddItemSuccess) => {
+      return of(new HomeActions.HomeRemoveProductStart(data.product));
+    })
+  );
+
   @Effect()
   cartRequestSessionStart = this.actions$.pipe(
     ofType(CartActions.CART_REQUEST_SESSION_START),

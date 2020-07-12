@@ -21,10 +21,6 @@ export class HomeComponent implements OnInit {
       this.fetchHomePending = homeState.fetchHomePending;
       this.fetchHomeFailure = homeState.fetchHomeFailure;
     });
-
-    if (this.products == null) {
-      this.store.dispatch(new HomeActions.HomeLoadStart());
-    }
     if (localStorage.getItem('sessionId') != null) {
       this.store.dispatch(new CartActions.CartLoadStart());
     }

@@ -29,12 +29,12 @@ export class CartLoadFailure implements Action {
 
 export class CartAddItemStart implements Action {
   readonly type = CART_ADD_ITEM_START;
-  constructor(public payload: CartOrder) {}
+  constructor(public payload: Product) {}
 }
 
 export class CartAddItemSuccess implements Action {
   readonly type = CART_ADD_ITEM_SUCCESS;
-  constructor(public payload: CartOrder) {}
+  constructor(public payload: CartOrder, public product: Product) {}
 }
 
 export class CartAddItemFailure implements Action {
