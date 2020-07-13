@@ -10,11 +10,13 @@ import {CartPageComponent} from './cart-page/cart-page.component';
 import {CartItemModule} from '../shared/components/cart-item/cart-item.component';
 import {RouterModule} from '@angular/router';
 import {CartInfoBoxModule} from '../shared/components/cart-info-box/cart-info-box.component';
+import {ConfirmationComponent} from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    CartPageComponent
+    CartPageComponent,
+    ConfirmationComponent
   ],
   imports: [
     HeaderModule,
@@ -29,7 +31,8 @@ import {CartInfoBoxModule} from '../shared/components/cart-info-box/cart-info-bo
   ],
   exports: [
     HomeComponent,
-    CartPageComponent
+    CartPageComponent,
+    ConfirmationComponent
   ]
 })
 export class PagesModule { }

@@ -13,6 +13,7 @@ import {HeaderModule} from './shared/components/header/header.component';
 import {HomeEffects} from './pages/home/store/home.effects';
 import {CartEffects} from './pages/cart-page/store/cart.effects';
 import {HttpClientModule} from '@angular/common/http';
+import {CheckoutEffects} from './pages/confirmation/store/checkout.effects';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import {HttpClientModule} from '@angular/common/http';
     StoreDevtoolsModule.instrument({
       maxAge: 25, // Retains last 25 states
     }),
-    EffectsModule.forRoot([HomeEffects, CartEffects]),
+    EffectsModule.forRoot([HomeEffects, CartEffects, CheckoutEffects]),
     BrowserAnimationsModule,
     HeaderModule
   ],
