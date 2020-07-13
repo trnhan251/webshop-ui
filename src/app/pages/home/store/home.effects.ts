@@ -8,6 +8,7 @@ import {environment} from '../../../../environments/environment';
 import {error} from 'util';
 import {of} from 'rxjs';
 import {Product} from '../../../shared/models/product';
+import * as CartActions from '../../cart-page/store/cart.actions';
 
 @Injectable()
 export class HomeEffects {

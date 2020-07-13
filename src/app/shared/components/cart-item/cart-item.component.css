@@ -1,0 +1,32 @@
+.item-container {
+  width: 600px;
+  background-color: #d4d4cd;
+}
+
+.product-image {
+  width: 40%;
+  float: left;
+}
+
+.content {
+  float: left;
+  margin: 20px;
+  color: #1c253b;
+}
+
+.content h3 {
+  margin: 5px 0;
+}
+
+.content p {
+  margin: 5px 0;
+}
+
+.content h4 {
+  margin: 5px 0;
+}
+
+.content button {
+  border-color: #1c253b;
+  margin-right: 10px;
+}

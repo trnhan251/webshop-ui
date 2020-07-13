@@ -1,3 +1,18 @@
-<p>
-  cart-page works!
-</p>
+<div class="head-info">
+  <h2>Items in your cart</h2>
+  <div class="head-buttons">
+    <button mat-flat-button (click)="emptyCart()">Empty cart</button>
+    <button mat-flat-button [routerLink]="'/home'">Keep browsing</button>
+  </div>
+</div>
+<div class="cart-container" *ngFor="let order of cartOrders">
+  <app-cart-item [cartItem]="order"></app-cart-item>
+</div>
+<div class="cost-info">
+  <p>Shipping cost: 10 €</p>
+  <h3>Total Cost: 100 €</h3>
+</div>
+<div class="checkout-info">
+  <h2>Checkout</h2>
+  <app-cart-info-box></app-cart-info-box>
+</div>

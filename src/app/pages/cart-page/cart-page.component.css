@@ -1,0 +1,48 @@
+app-cart-item {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.head-info {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.head-info h2 {
+}
+
+.head-info .head-buttons button {
+  width: 150px;
+  margin: 0 10px;
+  background-color: #2c466a;
+}
+
+.cost-info {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cost-info p {
+  margin: 5px 0;
+}
+
+.cost-info h3 {
+  margin: 5px 0;
+}
+
+.checkout-info {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+

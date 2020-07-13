@@ -1,10 +1,10 @@
-<div class="cart-item-container">
-  <div class="image-container">
-    <img src="../../../../assets/images/1.jpg" alt="cart-item">
-  </div>
-  <div class="item-info">
-    <h3>{{product.name}}</h3>
-    <p>Quantity: {{cartItem.quantity}}</p>
-    <h5>Cost: {{product.price * cartItem.quantity}}</h5>
+<div class="item-container">
+  <img class="product-image" alt="product" src="../../../../assets/images/{{product.id}}.jpg">
+  <div class="content" *ngIf="product != null">
+    <h3>{{product != null ? product.name : ''}}</h3>
+    <p>Quantity: {{product != null ? cartItem.quantity : null}}</p>
+    <h4>Total: {{product != null ? product.price*cartItem.quantity : null}} €</h4>
+    <button mat-stroked-button (click)="addOneItem()"><span class="material-icons">exposure_plus_1</span></button>
+    <button mat-stroked-button (click)="minusOneItem()"><span class="material-icons">exposure_neg_1</span></button>
   </div>
 </div>

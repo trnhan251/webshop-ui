@@ -1,5 +1,6 @@
 import {Component, NgModule, OnInit} from '@angular/core';
 import {MatButtonModule, MatIconModule, MatToolbarModule} from '@angular/material';
+import {RouterModule} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -12,14 +13,14 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }
 
 @NgModule({
   imports: [
     MatToolbarModule,
     MatIconModule,
-    MatButtonModule
+    MatButtonModule,
+    RouterModule
   ],
   declarations: [ HeaderComponent ],
   exports: [ HeaderComponent ]

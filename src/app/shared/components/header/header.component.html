@@ -8,9 +8,9 @@
 </mat-toolbar>
 -->
 <div class="topnav">
-  <a href="#">Online Webshop</a>
+  <a [routerLink]="'/home'">Online Webshop</a>
   <span class="example-spacer"></span>
-  <button mat-icon-button class="shopping-cart" aria-label="Example icon-button with heart icon">
+  <button mat-icon-button class="shopping-cart" aria-label="Example icon-button with heart icon" [routerLink]="'/cart'">
     <span class="material-icons">
       shopping_cart
     </span>
