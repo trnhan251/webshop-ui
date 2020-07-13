@@ -3,30 +3,30 @@
   background-color: #d4d4cd;
 }
 
-.product-image {
+.item-container .product-image {
   width: 40%;
   float: left;
 }
 
-.content {
+.item-container .content {
   float: left;
   margin: 20px;
   color: #1c253b;
 }
 
-.content h3 {
+.item-container .content h3 {
   margin: 5px 0;
 }
 
-.content p {
+.item-container .content p {
   margin: 5px 0;
 }
 
-.content h4 {
+.item-container .content h4 {
   margin: 5px 0;
 }
 
-.content button {
+.item-container .content button {
   border-color: #1c253b;
   margin-right: 10px;
 }

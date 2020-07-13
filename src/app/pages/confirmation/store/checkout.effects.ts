@@ -22,7 +22,7 @@ export class CheckoutEffects {
       return this.http.post(baseUrL, data.payload).pipe(
         map((resData: Order) => {
           console.log(resData);
-          return new CheckoutActions.CheckoutSuccess(resData);
+          return new CheckoutActions.CheckoutSuccess(resData, data.payload);
         }),
         catchError(errorRes => {
           const errorMessage = 'An error in CheckoutStart occurred!';

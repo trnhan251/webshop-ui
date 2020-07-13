@@ -7,6 +7,7 @@ import * as fromApp from '../../../shared/store/app.reducer';
 import {Store} from '@ngrx/store';
 import {CartOrder} from '../../models/cart-order';
 import * as CheckoutActions from '../../../pages/confirmation/store/checkout.actions';
+import {Router} from '@angular/router';
 @Component({
   selector: 'app-cart-info-box',
   templateUrl: './cart-info-box.component.html',
@@ -15,7 +16,9 @@ import * as CheckoutActions from '../../../pages/confirmation/store/checkout.act
 export class CartInfoBoxComponent implements OnInit {
   checkoutForm;
   cartOrders: CartOrder[];
-  constructor(private formBuilder: FormBuilder, private store: Store<fromApp.AppState>) {
+  constructor(private formBuilder: FormBuilder,
+              private store: Store<fromApp.AppState>,
+              private router: Router) {
     this.checkoutForm = this.formBuilder.group({
       email: '',
       streetAddress: '',
@@ -55,6 +58,7 @@ export class CartInfoBoxComponent implements OnInit {
     };
     console.log(checkoutOrder);
     this.store.dispatch(new CheckoutActions.CheckoutStart(checkoutOrder));
+    this.router.navigateByUrl('/confirmation').then(r => r);
   }
 }
 

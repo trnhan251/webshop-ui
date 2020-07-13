@@ -14,7 +14,7 @@ export class CheckoutStart implements Action {
 
 export class CheckoutSuccess implements Action {
   readonly type = CHECKOUT_SUCCESS;
-  constructor(public payload: Order) {}
+  constructor(public order: Order, public checkoutInfo: CheckoutOrder) {}
 }
 
 export class CheckoutFailure implements Action {

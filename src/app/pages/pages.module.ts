@@ -11,6 +11,7 @@ import {CartItemModule} from '../shared/components/cart-item/cart-item.component
 import {RouterModule} from '@angular/router';
 import {CartInfoBoxModule} from '../shared/components/cart-info-box/cart-info-box.component';
 import {ConfirmationComponent} from './confirmation/confirmation.component';
+import {ConfirmationItemModule} from '../shared/components/confirmation-item/confirmation-item.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {ConfirmationComponent} from './confirmation/confirmation.component';
     CartItemModule,
     MatButtonModule,
     RouterModule,
-    CartInfoBoxModule
+    CartInfoBoxModule,
+    ConfirmationItemModule
   ],
   exports: [
     HomeComponent,
