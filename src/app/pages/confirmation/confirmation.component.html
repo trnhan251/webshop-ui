@@ -11,11 +11,13 @@
     </div>
     <div class="col-1-2">
       <h3>Order Details</h3>
-      <p><span>Order Number: </span>{{order.id}}</p>
-      <p><span>Tracking Number: </span>123-123-123-123</p>
+      <p><span>Order Number: </span>{{shippingOrder.id}}</p>
+      <p><span>Tracking Number: </span>{{shippingOrder.trackingNumber}}</p>
+      <p><span>Shipping Cost: </span>{{shippingOrder.shippingCost}}</p>
+      <p><span>Total Cost: </span>{{shippingOrder.totalCost + shippingOrder.shippingCost}}</p>
       <h3>Personal Details</h3>
-      <p><span>E-Mail: </span>{{order.emailAddress}}</p>
-      <p><span>Street Address:</span>{{checkoutInfo.streetAddress}}</p>
+      <p><span>E-Mail: </span>{{shippingOrder.emailAddress}}</p>
+      <p><span>Street Address:</span>{{shippingOrder.streetAddress}}</p>
       <h3>Payment Details</h3>
       <p><span>Credit Card Number: </span>{{checkoutInfo.creditCardNumber}}</p>
       <p><span>Expires:</span>{{checkoutInfo.creditCardMonth}} {{checkoutInfo.creditCardYear}}</p>

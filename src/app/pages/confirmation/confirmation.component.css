@@ -17,3 +17,12 @@
   margin: 20px 50px;
 }
 
+.confirmation-content h3 {
+  color: #9c3e0b;
+}
+
+.confirmation-content span {
+  font-weight: 500;
+  color: #2c466a;
+}
+

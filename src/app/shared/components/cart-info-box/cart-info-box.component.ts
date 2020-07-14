@@ -57,7 +57,7 @@ export class CartInfoBoxComponent implements OnInit {
       orderItemList: this.cartOrders
     };
     console.log(checkoutOrder);
-    this.store.dispatch(new CheckoutActions.CheckoutStart(checkoutOrder));
+    this.store.dispatch(new CheckoutActions.CheckoutStart(checkoutOrder, this.cartOrders));
     this.router.navigateByUrl('/confirmation').then(r => r);
   }
 }
