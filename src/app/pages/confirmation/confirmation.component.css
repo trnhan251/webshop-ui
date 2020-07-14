@@ -1,0 +1,28 @@
+.confirmation-content{
+  margin: 20px 100px;
+}
+
+.row {
+  width: 100%;
+}
+
+.col-1-2 {
+  width: 50%;
+  float: left;
+}
+.confirmation-header {
+  margin: 0 50px;
+}
+.cart-container {
+  margin: 20px 50px;
+}
+
+.confirmation-content h3 {
+  color: #9c3e0b;
+}
+
+.confirmation-content span {
+  font-weight: 500;
+  color: #2c466a;
+}
+

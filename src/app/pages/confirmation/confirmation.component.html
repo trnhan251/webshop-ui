@@ -1,3 +1,28 @@
-<p>
-  confirmation works!
-</p>
+<app-banner></app-banner>
+<div class="confirmation-content">
+  <div class="confirmation-header">
+    <h2>Confirmation</h2>
+  </div>
+  <div class="row">
+    <div class="col-1-2">
+      <div class="cart-container" *ngFor="let order of cartOrders">
+        <app-confirmation-item [cartItem]="order"></app-confirmation-item>
+      </div>
+    </div>
+    <div class="col-1-2">
+      <h3>Order Details</h3>
+      <p><span>Order Number: </span>{{shippingOrder.id}}</p>
+      <p><span>Tracking Number: </span>{{shippingOrder.trackingNumber}}</p>
+      <p><span>Shipping Cost: </span>{{shippingOrder.shippingCost}}</p>
+      <p><span>Total Cost: </span>{{shippingOrder.totalCost + shippingOrder.shippingCost}}</p>
+      <h3>Personal Details</h3>
+      <p><span>E-Mail: </span>{{shippingOrder.emailAddress}}</p>
+      <p><span>Street Address:</span>{{shippingOrder.streetAddress}}</p>
+      <h3>Payment Details</h3>
+      <p><span>Credit Card Number: </span>{{checkoutInfo.creditCardNumber}}</p>
+      <p><span>Expires:</span>{{checkoutInfo.creditCardMonth}} {{checkoutInfo.creditCardYear}}</p>
+    </div>
+  </div>
+</div>
+
+

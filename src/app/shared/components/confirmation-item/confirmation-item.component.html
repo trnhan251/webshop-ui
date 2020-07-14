@@ -1,0 +1,14 @@
+<div class="confirmation-item">
+  <div class="row">
+    <div class="col-1-2">
+      <img class="product-image" alt="product" src="../../../../assets/images/{{product.id}}.jpg">
+    </div>
+    <div class="col-2-2">
+      <div class="content" *ngIf="product != null">
+        <h3>{{product != null ? product.name : ''}}</h3>
+        <p>Quantity: {{product != null ? cartItem.quantity : null}}</p>
+        <h4>Total: {{product != null ? product.price*cartItem.quantity : null}} €</h4>
+      </div>
+    </div>
+  </div>
+</div>
