@@ -14,7 +14,7 @@
       <p><span>Order Number: </span>{{shippingOrder.id}}</p>
       <p><span>Tracking Number: </span>{{shippingOrder.trackingNumber}}</p>
       <p><span>Shipping Cost: </span>{{shippingOrder.shippingCost}}</p>
-      <p><span>Total Cost: </span>{{shippingOrder.totalCost + shippingOrder.shippingCost}}</p>
+      <p><span>Total Cost (exclude Shipping Cost): </span>{{shippingOrder.totalCost + shippingOrder.shippingCost}}</p>
       <h3>Personal Details</h3>
       <p><span>E-Mail: </span>{{shippingOrder.emailAddress}}</p>
       <p><span>Street Address:</span>{{shippingOrder.streetAddress}}</p>
