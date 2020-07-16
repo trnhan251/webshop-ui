@@ -10,8 +10,8 @@
   <app-cart-item [cartItem]="order"></app-cart-item>
 </div>
 <div class="cost-info">
-  <p>Shipping cost: 10 €</p>
-  <h3>Total Cost: 100 €</h3>
+  <p>Shipping cost: {{shippingCost}} €</p>
+  <h3>Total Cost (exclude Shipping Cost): {{totalCost}} €</h3>
 </div>
 <div class="checkout-info">
   <h2>Checkout</h2>
